@@ -73,14 +73,14 @@ keywords = [
 ]
 
 all_jobs.each do |job|
-  keywords.each do |included_words, excluded_words|
-    passes = job.include?(included_words)
-    fails = job.include?(excluded_words)
+  keywords.each do |hash|
+    passes = hash["include"].any? { |word| job.include?(word) }
+    fails  = hash["exclude"].any? { |word| job.include?(word) }
     if passes && !fails #contains any of the included words and none of the excluded words]
       relevant_jobs.push(job)
     end
-  end 
-end 
+  end
+end
 
 
 =begin This is the old way I did it before Duncan suggested the more efficient way above
@@ -112,7 +112,7 @@ all_jobs.each do |job|
     end
   end
 end
-=end 
+=end
 
 puts relevant_jobs #so I can see the progress so far
 
@@ -123,18 +123,17 @@ end
 
 # next up: watch this video https://www.youtube.com/watch?v=j9MmyJrmLhI hrm not much interesting there
 
-=begin 
+=begin
 relevant_jobs.each do |link|
   job_content = open('link')
   job_parsed_content = Nokogiri::HTML(job_content)
   puts job_parsed_content
-end 
-=end 
+end
+=end
 
 #the following works, so why doesn't the above work?
 =begin
 job_content = open('https://jobs.highlineschools.org/elem-teacher-dual-language-prog-general-pool/job/8702141')
 job_parsed_content = Nokogiri::HTML(job_content)
 puts job_parsed_content
-=end 
-
+=end
