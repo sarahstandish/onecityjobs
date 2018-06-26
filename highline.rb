@@ -46,6 +46,10 @@ keywords = [
     "include" => ["bi", "para"],
     "exclude" => []
   },
+  { #ELL paraeducator
+    "include" => ["para", "ELL"]
+    "exclude" => []
+  }
   { #arabic
     "include" => ["arab"],
     "exclude" => []
@@ -68,13 +72,14 @@ keywords = [
   },
   { #bilingual paraeducator
     "include" => ["bilin"],
-    "exclude" => ["interpreter", "translator"] #don't want interpreter or translator jobs
+    "exclude" => ["interpreter", "translator", "Spanish"] #don't want interpreter or translator jobs or spanish jobs
   }
 ]
 
+
 all_jobs.each do |job|
   keywords.each do |hash|
-    passes = hash["include"].any? { |word| job.include?(word) }
+    passes = hash["include"].all? { |word| job.include?(word) }
     fails  = hash["exclude"].any? { |word| job.include?(word) }
     if passes && !fails #contains any of the included words and none of the excluded words]
       relevant_jobs.push(job)
@@ -83,7 +88,35 @@ all_jobs.each do |job|
 end
 
 
-=begin This is the old way I did it before Duncan suggested the more efficient way above
+
+puts relevant_jobs #so I can see the progress so far
+
+#put these links in a file
+File.open("highline.txt", "w+") do |line|
+  line.puts(relevant_jobs)
+end
+
+=begin
+relevant_jobs.each do |link|
+  job_content = open('link')
+  job_parsed_content = Nokogiri::HTML(job_content)
+  puts job_parsed_content
+end
+=end
+
+#the following works, so why doesn't the above work?
+
+=begin -- tabling the following for now
+job_content = open('https://jobs.highlineschools.org/elem-teacher-dual-language-prog-general-pool/job/8702141')
+job_parsed_content = Nokogiri::HTML(job_content)
+puts job_parsed_content
+=end
+
+
+=begin Outdated material
+# next up: watch this video https://www.youtube.com/watch?v=j9MmyJrmLhI hrm not much interesting there
+
+This is the old way I did it before Duncan suggested the more efficient way above
 #check the "all jobs" array for the terms that would indicate they are relevant to John.
 #if they are, add them to a the "relevant jobs" array
 #i'll shorten them incase they are abbreviated
@@ -112,28 +145,4 @@ all_jobs.each do |job|
     end
   end
 end
-=end
-
-puts relevant_jobs #so I can see the progress so far
-
-#put these links in a file
-File.open("highline.txt", "w+") do |line|
-  line.puts(relevant_jobs)
-end
-
-# next up: watch this video https://www.youtube.com/watch?v=j9MmyJrmLhI hrm not much interesting there
-
-=begin
-relevant_jobs.each do |link|
-  job_content = open('link')
-  job_parsed_content = Nokogiri::HTML(job_content)
-  puts job_parsed_content
-end
-=end
-
-#the following works, so why doesn't the above work?
-=begin
-job_content = open('https://jobs.highlineschools.org/elem-teacher-dual-language-prog-general-pool/job/8702141')
-job_parsed_content = Nokogiri::HTML(job_content)
-puts job_parsed_content
 =end
