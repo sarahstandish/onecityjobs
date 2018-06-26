@@ -47,9 +47,9 @@ keywords = [
     "exclude" => []
   },
   { #ELL paraeducator
-    "include" => ["para", "ELL"]
+    "include" => ["para", "ELL"],
     "exclude" => []
-  }
+  },
   { #arabic
     "include" => ["arab"],
     "exclude" => []
