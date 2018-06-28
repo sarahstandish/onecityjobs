@@ -10,8 +10,7 @@ content = open('https://kent.tedk12.com/hire/index.aspx')
 
 parsed_content = Nokogiri::HTML(content)
 
-puts parsed_content.css('#JobList').inner_text
-
+puts parsed_content.css('#JobList')
 
 # note: use . for classes and # for ids
 #.css('.panelContent')
