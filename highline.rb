@@ -18,7 +18,7 @@ parsed_content = Nokogiri::HTML(content)
 
 #this would return only the "item title" that appears under a "result item"
 #not sure how useful it is for my purposes but just trying it out
-parsed_content.css('.result-item').css('.item-title')
+# parsed_content.css('.result-item').css('.item-title')
 #i'm not 100% on the content above, just mainly following along with the video I watched there
 
 #create an array where I will eventually store my relevant jobs. Also, an array for all jobs.
@@ -59,7 +59,7 @@ keywords = [
     "exclude" => []
   },
   { #tagolog
-    "include" => ["tagolog"],
+    "include" => ["tagalog"],
     "exclude" => []
   },
   { #russian
