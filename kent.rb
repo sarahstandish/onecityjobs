@@ -16,7 +16,7 @@ parsed_content.css('#JobList').css('.rowA').each do |item|
 end
 
 parsed_content.css('#JobList').css('.rowB').each do |item|
-  kent_content.push(item.to_s)
+  kent_content.push(item)
 end
 
 kent_content.each do |item|
@@ -27,6 +27,14 @@ end
 all_jobs = Array.new
 relevant_jobs = Array.new
 kent_relevant_content = Array.new
+
+kent_content.each do |item|
+  link = item['href'].to_s
+  all_jobs.push(link)
+end
+
+puts all_jobs #wow that seriously did not work
+
 
 keywords = [
   { #dual language teaching
@@ -71,6 +79,7 @@ keywords = [
   }
 ]
 
+=begin
 kent_content.each do |job|
   keywords.each do |hash|
     passes = hash["include"].all? { |word| job.include?(word) }
@@ -80,11 +89,13 @@ kent_content.each do |job|
     end
   end
 end
+=end
 
 puts kent_content.length
 puts kent_relevant_content.length
+puts all_jobs.length
 
-
+# video to keep watching: https://www.youtube.com/watch?v=1UYBAn69Qrk
 
 # parsed_content.split(/href/)
 
@@ -94,3 +105,18 @@ puts kent_relevant_content.length
 #.css('.content')
 
 #tried: .split(" "), undefined method
+
+=begin
+Here is a different keywords array I made to test if it's working
+Because my other keywords could easily return zero
+keywords = [
+  {
+    "include" => ["elementary"],
+    "exclude" => []
+  },
+  {
+    "include" => ["music"],
+    "exclude" => []
+  }
+]
+=end
