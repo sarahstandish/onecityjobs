@@ -4,6 +4,31 @@
 require 'open-uri'
 require 'Nokogiri'
 
+#here is my second try based on info found in http://ruby.bastardsbook.com/chapters/html-parsing/
+
+page = Nokogiri::HTML(open('https://kent.tedk12.com/hire/index.aspx'))
+links = page.css('#JobList').css("a")
+
+all_kent_jobs = Hash.new
+#this time will try using a hash instead of an array
+
+links.each do |link|
+#  puts link.text
+#  puts "*****"
+#  puts link["href"]
+#  puts "-----"
+  all_kent_jobs[link.text] = link["href"]
+end
+
+all_kent_jobs.each do |title, url|
+  puts "Job: #{title}. Learn more at https://kent.tedk12.com/hire/#{url}"
+end
+
+=begin
+# going to make this all a comment
+# so I can try something else
+# this was my old work, which didn't work so well 
+
 #open the Kent school district jobs page
 content = open('https://kent.tedk12.com/hire/index.aspx')
 
@@ -16,7 +41,7 @@ parsed_content.css('#JobList').css('.rowA').each do |item|
 end
 
 parsed_content.css('#JobList').css('.rowB').each do |item|
-  kent_content.push(item)
+  kent_content.push(item.to_s)
 end
 
 kent_content.each do |item|
@@ -33,7 +58,7 @@ kent_content.each do |item|
   all_jobs.push(link)
 end
 
-puts all_jobs #wow that seriously did not work
+puts all_jobs
 
 
 keywords = [
@@ -78,6 +103,7 @@ keywords = [
     "exclude" => ["interpreter", "translator", "Spanish"] #don't want interpreter or translator jobs or spanish jobs
   }
 ]
+=end
 
 =begin
 kent_content.each do |job|
@@ -91,9 +117,11 @@ kent_content.each do |job|
 end
 =end
 
+=begin
 puts kent_content.length
 puts kent_relevant_content.length
 puts all_jobs.length
+= end
 
 # video to keep watching: https://www.youtube.com/watch?v=1UYBAn69Qrk
 
