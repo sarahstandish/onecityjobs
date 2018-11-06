@@ -89,7 +89,7 @@ end
 
 
 
-puts relevant_jobs #so I can see the progress so far
+print relevant_jobs #so I can see the progress so far
 
 #put these links in a file
 File.open("highline.txt", "w+") do |line|

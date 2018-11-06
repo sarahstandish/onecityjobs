@@ -13,55 +13,45 @@ all_kent_jobs = Hash.new
 #this time will try using a hash instead of an array
 
 links.each do |link|
-#  puts link.text
-#  puts "*****"
-#  puts link["href"]
-#  puts "-----"
   all_kent_jobs[link.text] = link["href"]
 end
 
+=begin
 all_kent_jobs.each do |title, url|
   puts "Job: #{title}. Learn more at https://kent.tedk12.com/hire/#{url}"
 end
+=end
 
-=begin
-# going to make this all a comment
-# so I can try something else
-# this was my old work, which didn't work so well 
 
-#open the Kent school district jobs page
-content = open('https://kent.tedk12.com/hire/index.aspx')
 
-kent_content = Array.new
+test_jobs = {} #set up a test in case all onecity jobs return nothing
 
-parsed_content = Nokogiri::HTML(content)
+test_keywords = [
+  { "include" => ["paraeducator"],
+    "exclude" => ["substitute"]
+  },
+  { "include" => ["spanish"],
+    "exclude" => []
+  }
+]
 
-parsed_content.css('#JobList').css('.rowA').each do |item|
-  kent_content.push(item.to_s)
+all_kent_jobs.each do |job_title, url|
+  test_keywords.each do |include_exclude_hash|
+    passes = include_exclude_hash["include"].all? { |word| job_title.downcase.include?(word) }
+    fails = include_exclude_hash["exclude"].any? { |word| job_title.downcase.include?(word) }
+    if passes & !fails
+      test_jobs[job_title] = url
+    end
+  end
 end
 
-parsed_content.css('#JobList').css('.rowB').each do |item|
-  kent_content.push(item.to_s)
+File.open("kent_test.txt", "w") do |file|
+  test_jobs.each do |title, url|
+    file.puts "Job: #{title}. \n Learn more at https://kent.tedk12.com/hire/#{url} \n \n"
+  end
 end
 
-kent_content.each do |item|
-  puts item
-  puts "------------------"
-end
-
-all_jobs = Array.new
-relevant_jobs = Array.new
-kent_relevant_content = Array.new
-
-kent_content.each do |item|
-  link = item['href'].to_s
-  all_jobs.push(link)
-end
-
-puts all_jobs
-
-
-keywords = [
+one_city_keywords = [
   { #dual language teaching
     "include" => ["dual"],
     "exclude" => []
@@ -103,48 +93,28 @@ keywords = [
     "exclude" => ["interpreter", "translator", "Spanish"] #don't want interpreter or translator jobs or spanish jobs
   }
 ]
-=end
 
-=begin
-kent_content.each do |job|
-  keywords.each do |hash|
-    passes = hash["include"].all? { |word| job.include?(word) }
-    fails  = hash["exclude"].any? { |word| job.include?(word) }
-    if passes && !fails #contains any of the included words and none of the excluded words]
-      kent_relevant_content.push(job)
+one_city_jobs = {} #create an empty hash for relevant jobs
+
+all_kent_jobs.each do |job_title, url|
+  one_city_keywords.each do |include_exclude_hash|
+    passes = include_exclude_hash["include"].all? { |word| job_title.downcase.include?(word) }
+    fails = include_exclude_hash["exclude"].any? { |word| job_title.downcase.include?(word) }
+    if passes & !fails
+      one_city_jobs[job_title] = url
     end
   end
 end
-=end
 
-=begin
-puts kent_content.length
-puts kent_relevant_content.length
-puts all_jobs.length
-= end
+File.open("kent.text", "w") do |file|
+if one_city_jobs.empty?
+  file.puts "There are no One City jobs in the Kent school district."
+else  
+  file.puts "These are the One City jobs:"
+  onecity_jobs.each do |title, url|
+    file.puts "Job: #{title}. /n Learn more at https://kent.tedk12.com/hire/#{url} /n /n"
+  end
+end
+end
 
-# video to keep watching: https://www.youtube.com/watch?v=1UYBAn69Qrk
 
-# parsed_content.split(/href/)
-
-# note: use . for classes and # for ids
-#.css('.panelContent')
-
-#.css('.content')
-
-#tried: .split(" "), undefined method
-
-=begin
-Here is a different keywords array I made to test if it's working
-Because my other keywords could easily return zero
-keywords = [
-  {
-    "include" => ["elementary"],
-    "exclude" => []
-  },
-  {
-    "include" => ["music"],
-    "exclude" => []
-  }
-]
-=end
