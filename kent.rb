@@ -7,13 +7,14 @@ require 'Nokogiri'
 #here is my second try based on info found in http://ruby.bastardsbook.com/chapters/html-parsing/
 
 page = Nokogiri::HTML(open('https://kent.tedk12.com/hire/index.aspx'))
-links = page.css('#JobList').css("a")
+links = page.css("a")
+#links = page.css('#JobList').css("a")
 
 all_kent_jobs = Hash.new
 #this time will try using a hash instead of an array
 
 links.each do |link|
-  all_kent_jobs[link.text] = link["href"]
+  all_kent_jobs[link.text] = "https://kent.tedk12.com/hire/" + link["href"].to_s
 end
 
 =begin
@@ -47,7 +48,7 @@ end
 
 File.open("kent_test.txt", "w") do |file|
   test_jobs.each do |title, url|
-    file.puts "Job: #{title}. \n Learn more at https://kent.tedk12.com/hire/#{url} \n \n"
+    file.puts "Job: #{title}. \n #{url} \n \n"
   end
 end
 
@@ -106,12 +107,12 @@ all_kent_jobs.each do |job_title, url|
   end
 end
 
-File.open("kent.text", "w") do |file|
+File.open("kent.txt", "w") do |file|
 if one_city_jobs.empty?
-  file.puts "There are no One City jobs in the Kent school district."
+  file.puts "There are no One City jobs in the Kent school district right now."
 else  
   file.puts "These are the One City jobs:"
-  onecity_jobs.each do |title, url|
+  one_city_jobs.each do |title, url|
     file.puts "Job: #{title}. /n Learn more at https://kent.tedk12.com/hire/#{url} /n /n"
   end
 end
