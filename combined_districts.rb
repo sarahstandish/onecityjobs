@@ -5,8 +5,6 @@
 require 'open-uri'
 require 'Nokogiri'
 require 'date'
- #these will allow ruby to read and parse the html
-
 
 def get_district_jobs(url, hash, url_starter)
   page = Nokogiri::HTML(open(url))
@@ -51,6 +49,11 @@ def test_jobs(hash, district_name)
     end
     end
   end
+  
+if test_jobs.empty?
+  puts "Program may be broken for the #{district_name} school district."
+end
+  
 end
 
 def one_city_jobs(hash, school_district)
@@ -111,6 +114,12 @@ end
 
 d = DateTime.now
 
+if one_city_jobs.empty?
+  puts "No One City jobs in the #{school_district} school district right now. Check back later."
+else
+  puts "Check the file one_city_jobs.txt for relevant jobs in the #{school_district} school district."
+end
+
 File.open("one_city_jobs.txt", "a") do |file|
 if one_city_jobs.empty?
   file.puts "There are no One City jobs in the #{school_district} school district as of #{d.strftime("%d/%m/%Y %H:%M")}. \n\n"
@@ -155,7 +164,3 @@ districts.each do |district, information|
   test_jobs(all_district_jobs, districts[district]["district_name"])
   one_city_jobs(all_district_jobs, districts[district]["district_name"])
 end
-
-
-
-

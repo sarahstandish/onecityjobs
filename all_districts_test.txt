@@ -1,5 +1,8 @@
 
-Test jobs as of 08/11/2018 17:31: Kent school district.
+Test jobs as of 12/11/2018 15:09: Kent school district.
+Job: Paraeducator, Special Education Integrated Program (IP), 3hr/9mo - FW1816. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4022 
+ 
 Job: Paraeducator, Special Education Support Center (SC) 6.5hrs/9mo - CC1813. 
  Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4039 
  
@@ -21,7 +24,10 @@ Job: Special Education Paraeducator, Adaptive Support Center (ASC) 6.5hrs/9mo - 
 Job: Paraeducator, Special Education Support Center (SC) (Intermediate) 6.5hrs/9mo  LTT - LY1806. 
  Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3579 
  
-Test jobs as of 08/11/2018 17:31: Highline school district.
+Test jobs as of 12/11/2018 15:09: Highline school district.
+Job: Paraeducator, Special Education Integrated Program (IP), 3hr/9mo - FW1816. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4022 
+ 
 Job: Paraeducator, Special Education Support Center (SC) 6.5hrs/9mo - CC1813. 
  Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4039 
  
@@ -44,23 +50,20 @@ Job: Paraeducator, Special Education Support Center (SC) (Intermediate) 6.5hrs/9
  Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3579 
  
 Job: Paraeducator. 
- Learn more at https://jobs.highlineschools.org/paraeducator/job/9677882 
+ Learn more at https://jobs.highlineschools.org/paraeducator/job/9868475 
  
 Job: Paraeducator-Bilingual. 
- Learn more at https://jobs.highlineschools.org/paraeducator-bilingual/job/9840506 
+ Learn more at https://jobs.highlineschools.org/paraeducator-bilingual/job/9386734 
  
 Job: Paraeducator-Special Education (ECE or IK). 
- Learn more at https://jobs.highlineschools.org/paraeducator-special-education-ece-or-ik/job/9860046 
+ Learn more at https://jobs.highlineschools.org/paraeducator-special-education-ece-or-ik/job/9396444 
  
 Job: Paraeducator-Special Education CBS. 
- Learn more at https://jobs.highlineschools.org/paraeducator-special-education-cbs/job/9042729 
+ Learn more at https://jobs.highlineschools.org/paraeducator-special-education-cbs/job/9869587 
  
 Job: Paraeducator-Special Education EBC. 
  Learn more at https://jobs.highlineschools.org/paraeducator-special-education-ebc/job/9860045 
  
 Job: Paraeducator-Special Education ILC. 
- Learn more at https://jobs.highlineschools.org/paraeducator-special-education-ilc/job/9459662 
- 
-Job: Paraeducator-Special Education Navos Facility. 
- Learn more at https://jobs.highlineschools.org/paraeducator-special-education-navos-facility/job/9700512 
+ Learn more at https://jobs.highlineschools.org/paraeducator-special-education-ilc/job/9783839 
  
