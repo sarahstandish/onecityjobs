@@ -137,7 +137,7 @@ files = ["all_districts_test.txt", "one_city_jobs.txt"]
 def clear_files(files_array)
   files_array.each do |f|
     File.open(f, "w") do |file|
-      file.puts ""
+      file.truncate(0)
     end
   end
 end
