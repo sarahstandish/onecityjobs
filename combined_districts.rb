@@ -20,7 +20,7 @@ def test_jobs(hash, district_name)
   
   test_keywords = [
     { "include" => ["paraeducator"],
-      "exclude" => ["substitute"]
+      "exclude" => ["substitute", "special"]
     },
     { "include" => ["spanish"],
       "exclude" => []
@@ -31,7 +31,7 @@ def test_jobs(hash, district_name)
     test_keywords.each do |include_exclude_hash|
       passes = include_exclude_hash["include"].all? { |word| job_title.downcase.include?(word) }
       fails = include_exclude_hash["exclude"].any? { |word| job_title.downcase.include?(word) }
-      if passes & !fails
+      if passes && !fails
         test_jobs[job_title] = url
       end
     end
@@ -60,7 +60,7 @@ def one_city_jobs(hash, school_district)
   one_city_keywords = [
   { #dual language teaching
     "include" => ["dual"],
-    "exclude" => ["Spanish"]
+    "exclude" => ["spanish"]
   },
   { #vietnamese
     "include" => ["viet"],
@@ -71,7 +71,7 @@ def one_city_jobs(hash, school_district)
     "exclude" => []
   },
   { #ELL paraeducator
-    "include" => ["para", "ELL"],
+    "include" => ["para", "ell"],
     "exclude" => []
   },
   { #arabic
@@ -96,7 +96,7 @@ def one_city_jobs(hash, school_district)
   },
   { #bilingual paraeducator
     "include" => ["bilin"],
-    "exclude" => ["interpreter", "translator", "Spanish"] #don't want interpreter or translator jobs or spanish jobs
+    "exclude" => ["interpreter", "translator", "spanish"] #don't want interpreter or translator jobs or spanish jobs
   }
 ]
 
@@ -106,7 +106,7 @@ hash.each do |job_title, url|
   one_city_keywords.each do |include_exclude_hash|
     passes = include_exclude_hash["include"].all? { |word| job_title.downcase.include?(word) }
     fails = include_exclude_hash["exclude"].any? { |word| job_title.downcase.include?(word) }
-    if passes & !fails
+    if passes && !fails
       one_city_jobs[job_title] = url
     end
   end
@@ -115,9 +115,14 @@ end
 d = DateTime.now
 
 if one_city_jobs.empty?
-  puts "No One City jobs in the #{school_district} school district right now. Check back later."
+  puts "No One City jobs in the #{school_district} school district right now. Check back later. \n\n"
 else
-  puts "Check the file one_city_jobs.txt for relevant jobs in the #{school_district} school district."
+  puts "Some of the jobs in the #{school_district} district include: \n\n"
+  one_city_jobs.each_key do |job_title|
+    puts job_title
+    puts "\n"
+  end
+  puts "Check the file one_city_jobs.txt for more information. \n\n"
 end
 
 File.open("one_city_jobs.txt", "a") do |file|

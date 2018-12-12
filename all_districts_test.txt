@@ -1,69 +1,23 @@
-
-Test jobs as of 12/11/2018 15:09: Kent school district.
-Job: Paraeducator, Special Education Integrated Program (IP), 3hr/9mo - FW1816. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4022 
- 
-Job: Paraeducator, Special Education Support Center (SC) 6.5hrs/9mo - CC1813. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4039 
+Test jobs as of 11/12/2018 17:35: Kent school district.
+Job: Paraeducator, Title/LAP, 5.5hr/9mo - EP1822. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4092 
  
 Job: Paraeducator Centralized Inclusive Education, 6.5 hr/9 mo - IE1828. 
  Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4035 
  
-Job: SC1818 Paraeducator, Special Education Early Childhood Education (ECE) 3hrs/9m - SC1818. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3902 
- 
-Job: Paraeducator, Special Education Early Childhood Education (ECE) 4.5hrs/9mo â DE1813. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3956 
- 
-Job: Paraeducator, Special Education Support Center (SC) 6.5hrs/9mo - ME1806. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3755 
- 
-Job: Special Education Paraeducator, Adaptive Support Center (ASC) 6.5hrs/9mo - PO1815. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3872 
- 
-Job: Paraeducator, Special Education Support Center (SC) (Intermediate) 6.5hrs/9mo  LTT - LY1806. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3579 
- 
-Test jobs as of 12/11/2018 15:09: Highline school district.
-Job: Paraeducator, Special Education Integrated Program (IP), 3hr/9mo - FW1816. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4022 
- 
-Job: Paraeducator, Special Education Support Center (SC) 6.5hrs/9mo - CC1813. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4039 
+Test jobs as of 11/12/2018 17:35: Highline school district.
+Job: Paraeducator, Title/LAP, 5.5hr/9mo - EP1822. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4092 
  
 Job: Paraeducator Centralized Inclusive Education, 6.5 hr/9 mo - IE1828. 
  Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4035 
  
-Job: SC1818 Paraeducator, Special Education Early Childhood Education (ECE) 3hrs/9m - SC1818. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3902 
- 
-Job: Paraeducator, Special Education Early Childhood Education (ECE) 4.5hrs/9mo â DE1813. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3956 
- 
-Job: Paraeducator, Special Education Support Center (SC) 6.5hrs/9mo - ME1806. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3755 
- 
-Job: Special Education Paraeducator, Adaptive Support Center (ASC) 6.5hrs/9mo - PO1815. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3872 
- 
-Job: Paraeducator, Special Education Support Center (SC) (Intermediate) 6.5hrs/9mo  LTT - LY1806. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=3579 
+Job: Elem Teacher-Dual Language Program-Spanish. 
+ Learn more at https://jobs.highlineschools.org/elem-teacher-dual-language-program-spanish/job/10066417 
  
 Job: Paraeducator. 
- Learn more at https://jobs.highlineschools.org/paraeducator/job/9868475 
+ Learn more at https://jobs.highlineschools.org/paraeducator/job/9946658 
  
 Job: Paraeducator-Bilingual. 
  Learn more at https://jobs.highlineschools.org/paraeducator-bilingual/job/9386734 
- 
-Job: Paraeducator-Special Education (ECE or IK). 
- Learn more at https://jobs.highlineschools.org/paraeducator-special-education-ece-or-ik/job/9396444 
- 
-Job: Paraeducator-Special Education CBS. 
- Learn more at https://jobs.highlineschools.org/paraeducator-special-education-cbs/job/9869587 
- 
-Job: Paraeducator-Special Education EBC. 
- Learn more at https://jobs.highlineschools.org/paraeducator-special-education-ebc/job/9860045 
- 
-Job: Paraeducator-Special Education ILC. 
- Learn more at https://jobs.highlineschools.org/paraeducator-special-education-ilc/job/9783839 
  
