@@ -5,6 +5,12 @@
 require 'open-uri'
 require 'Nokogiri'
 require 'date'
+require 'pry'
+
+TEXT_FILES_PATH = ""
+ONECITY_FILE = TEXT_FILES_PATH + "one_city_jobs.txt"
+ALL_DISTRICTS_FILE = TEXT_FILES_PATH + "all_districts_test.txt"
+
 
 def get_district_jobs(url, hash, url_starter)
   page = Nokogiri::HTML(open(url))
@@ -39,7 +45,7 @@ def test_jobs(hash, district_name)
   
   d = DateTime.now
   
-  File.open("all_districts_test.txt", "a") do |file|
+  File.open(ALL_DISTRICTS_FILE, "a") do |file|
     if test_jobs.empty?
       file.puts "#{district_name} school district test failed at #{d.strftime("%d/%m/%Y %H:%M")}."
     else
@@ -122,10 +128,10 @@ else
     puts job_title
     puts "\n"
   end
-  puts "Check the file one_city_jobs.txt for more information. \n\n"
+  puts "Check the file #{ONECITY_FILE} for more information. \n\n"
 end
 
-File.open("one_city_jobs.txt", "a") do |file|
+File.open(ONECITY_FILE, "a") do |file|
 if one_city_jobs.empty?
   file.puts "There are no One City jobs in the #{school_district} school district as of #{d.strftime("%d/%m/%Y %H:%M")}. \n\n"
 else  
@@ -137,7 +143,7 @@ end
 end
 end
 
-files = ["all_districts_test.txt", "one_city_jobs.txt"]
+files = [ALL_DISTRICTS_FILE, ONECITY_FILE]
 
 def clear_files(files_array)
   files_array.each do |f|
@@ -147,7 +153,7 @@ def clear_files(files_array)
   end
 end
 
-all_district_jobs = Hash.new
+#wil not be able to do the following districts: edmonds, everett, tacoma
 
 districts = {
   "Kent" =>
@@ -155,17 +161,24 @@ districts = {
       "url" => "https://kent.tedk12.com/hire/index.aspx",
       "url_starter" => "https://kent.tedk12.com/hire/"
   },
-    "Highline" =>
+   "Highline" =>
        {"district_name" => "Highline",
       "url" => "https://jobs.highlineschools.org/jobs?page_size=250&page_number=1&sort_by=headline&sort_order=ASC",
       "url_starter" => "https://jobs.highlineschools.org"
   },
+  "Bellevue" =>
+  {"district_name" => "Bellevue",
+    "url" => "https://bsd405.tedk12.com/hire/index.aspx",
+    "url_starter" => "https://bsd405.tedk12.com/hire/"
+  }
 }
 
 clear_files(files)
 
 districts.each do |district, information|
+  all_district_jobs = Hash.new #all jobs in a single districti
   get_district_jobs(districts[district]["url"], all_district_jobs, districts[district]["url_starter"])
+  #binding.pry
   test_jobs(all_district_jobs, districts[district]["district_name"])
   one_city_jobs(all_district_jobs, districts[district]["district_name"])
 end

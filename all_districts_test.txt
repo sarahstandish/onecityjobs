@@ -1,23 +1,30 @@
-Test jobs as of 11/12/2018 17:35: Kent school district.
-Job: Paraeducator, Title/LAP, 5.5hr/9mo - EP1822. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4092 
+Test jobs as of 20/12/2018 16:45: Kent school district.
+Job: Paraeducator, Positive Behavior Support Assistant (Title/LAP) - 6.5 hrs/9mo - SH1828. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4119 
  
-Job: Paraeducator Centralized Inclusive Education, 6.5 hr/9 mo - IE1828. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4035 
+Job: Paraeducator, Title/LAP Long Term Temp (LTT),  6hrs/9mo - SH1827. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4110 
  
-Test jobs as of 11/12/2018 17:35: Highline school district.
-Job: Paraeducator, Title/LAP, 5.5hr/9mo - EP1822. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4092 
+Job: Paraeducator, Positive Behavior Support Assistant (Title/LAP) 6hrs/9mo - SH1826. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4106 
  
-Job: Paraeducator Centralized Inclusive Education, 6.5 hr/9 mo - IE1828. 
- Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4035 
+Job: Paraeducator, Title I Math 6.5hrs/9mo - MR1834. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4105 
  
-Job: Elem Teacher-Dual Language Program-Spanish. 
- Learn more at https://jobs.highlineschools.org/elem-teacher-dual-language-program-spanish/job/10066417 
+Job: Paraeducator, Title I Math 6.5hrs/9mo - MR1835. 
+ Learn more at https://kent.tedk12.com/hire/ViewJob.aspx?JobID=4104 
  
+Test jobs as of 20/12/2018 16:45: Highline school district.
 Job: Paraeducator. 
- Learn more at https://jobs.highlineschools.org/paraeducator/job/9946658 
+ Learn more at https://jobs.highlineschools.org/paraeducator/job/10117207 
  
 Job: Paraeducator-Bilingual. 
  Learn more at https://jobs.highlineschools.org/paraeducator-bilingual/job/9386734 
+ 
+Job: Secondary Teacher-Spanish. 
+ Learn more at https://jobs.highlineschools.org/secondary-teacher-spanish/job/10117205 
+ 
+Test jobs as of 20/12/2018 16:45: Bellevue school district.
+Job: ELEMENTARY SPANISH DUAL LANGUAGE/IMMERSION TEACHER(S) 2019-20. 
+ Learn more at https://bsd405.tedk12.com/hire/ViewJob.aspx?JobID=1988 
  
